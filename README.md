@@ -55,16 +55,6 @@ returns lua table from bytes. Bytes should be match to proto description *messag
 Full README to **pb** and **protoc** read [here](https://github.com/starwing/lua-protobuf/blob/master/README.md)
 
 
-```lua
-local function update_uptime(self)
-  if uptime then
-    local uptime = uptime.get()
-    print(uptime) -- 809031
-  end
-end
-
-```
-
 ## License, Authors
 *MIT license*
 This NE wrapped by [AKashpur](https://github.com/AKashpur)
