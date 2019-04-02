@@ -1,0 +1,33 @@
+local protoc = require("pb.protoc")
+
+function init(self)
+	-- You can also add paths
+	--[[
+	protoc:addpath("/resources/path1")
+	protoc:addpath("/resources/path2")
+	--]]
+
+	protoc:loadfile("/resources/test.proto")
+
+	local data = {
+		values = {
+			first = {
+				number = 1.5,
+				unumber = 20,
+				string = "hello"
+			},
+			seconds = {
+				number = 5.5,
+				string = "hello"
+			}
+		}
+	}
+
+	local bytes = pb.encode("some.Example", data)
+	print("Package to")
+	print(bytes)
+
+	local unpackage = pb.decode("some.Example", bytes)
+	print("Got data back:")
+	pprint(unpackage)
+end

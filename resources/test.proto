@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package some;
+
+message Example{
+  message Item{
+    double float = 1;
+    uint32 unumber = 2;
+    string string = 3;
+  }
+  map<string, Item> values = 1; 
+}
