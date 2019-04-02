@@ -22,6 +22,26 @@ You can use the Defold-Protobuf extension in your own project by adding this pro
 
 Or point to the ZIP file of a [specific release](https://github.com/Melsoft-Games/defold-protobuf/releases).
 
+## Short API:
+
+``` lua 
+local protoc = require("pb.protoc")
+
+protoc:loadfile("/resources/test.proto")
+local data = {
+	values = {
+		first = {
+		number = 1.5,
+		unumber = 20,
+		string = "hello"
+	}
+}
+
+-- some.Example - name of message from test.proto
+local bytes = pb.encode("some.Example", data)
+local unpackage = pb.decode("some.Example", bytes)
+```
+
 ## API
 
 ### **protoc** - lua module to parse proto files
