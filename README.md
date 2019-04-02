@@ -29,7 +29,6 @@ This part of docs from [lua-protobuf README](https://github.com/starwing/lua-pro
 
 | Function                | Returns       | Descriptions                                         |
 | ----------------------- | ------------- | ---------------------------------------------------- |
-| `protoc.new()`          | Proroc object | create a new compiler instance                       |
 | `protoc.reload()`       | true          | reload all google standard messages into `pb` module |
 | `protoc:parse(string)`       | table         | transform schema to `DescriptorProto` table          |
 | `protoc:parsefile(string)`   | table         | like `protoc:parse()`, but accept filename                |
