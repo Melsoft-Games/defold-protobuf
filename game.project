@@ -12,3 +12,5 @@ height = 640
 title = defold-protobuf
 custom_resources = resources/
 
+[library]
+include_dirs = pb
