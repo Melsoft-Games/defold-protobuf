@@ -278,7 +278,7 @@ function Parser:parsefile(name)
    if info then return info end
    local errors = {}
    for _, path in ipairs(self.paths) do
-      local fn = path ~= "" and path.."/"..name or name
+      local fn = path ~= "" and path..name or name
       local fh, err = sys.load_resource(fn)
       if fh then
          info = self:parse(fh, name)
