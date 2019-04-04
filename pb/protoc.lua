@@ -274,6 +274,7 @@ function Parser:addpath(path)
 end
 
 function Parser:parsefile(name)
+   name = "/" .. name
    local info = self.loaded[name]
    if info then return info end
    local errors = {}
