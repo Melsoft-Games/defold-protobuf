@@ -27,7 +27,7 @@ Or point to the ZIP file of a [specific release](https://github.com/Melsoft-Game
 ``` lua 
 local protoc = require("pb.protoc")
 
-protoc:loadfile("/resources/test.proto")
+protoc:loadfile("resources/test.proto")
 local data = {
 	values = {
 		first = {
