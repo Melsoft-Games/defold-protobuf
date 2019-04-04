@@ -7,7 +7,7 @@ function init(self)
 	protoc:addpath("/resources/path2")
 	--]]
 
-	protoc:loadfile("/resources/test.proto")
+	protoc:loadfile("resources/test.proto")
 
 	local data = {
 		values = {
